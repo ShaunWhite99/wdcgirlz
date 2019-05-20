@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset = "UTF-8">
+        <title>Restaurant Page</title>
+
+
+        <style>
+        	body
+        	{
+        		top: 0;
+        		color:black;
+                font-family:sans-serif;
+               
+                margin:0;
+        	}
+  
+
+    .bg-image{
+  height: 900px;
+  background-image: url("https://d2jz4nqvi4omcr.cloudfront.net/Blogs/restauranttrendscover.jpg");
+  background-size: cover;
+  overflow:hidden;
+
+}
+
+.topnav {
+  position:fixed;
+  overflow: hidden;
+  background-color: #acea46;
+  border: solid 1px;
+  margin: 0px 0px 0px 0px;
+  width: 100%
+
+}
+.topnav a {
+
+  float: left;
+  color: black;
+  font-family: Arial Black;
+  padding: 1% 9% 0% 1%;
+  text-decoration: none;
+  font-size: 18px;
+}
+.topnav a:hover {
+
+  background-color: #acea46;
+  color: white;
+}
+.topnav a.active {
+  background-color: #4CAF50;
+  color: black;
+}
+.topnav p {
+  font-family: cursive;
+  padding-right: 30px;
+  float: right;
+}
+          
+.btn {
+  cursor:pointer;
+  border-color:black;
+   font-family: Arial Black;
+
+  overflow: hidden;
+  background-color: #acea46;
+}
+
+input[type=submit] {
+
+  width: 28.5%;
+  margin: 10px 0;
+
+  border-radius: 4px;
+  font-family: "Times New Roman";
+  font-size: 16px;
+  font-weight: bold;
+
+ }
+
+      
+            #main
+            {
+            }
+        	.previousBookings
+        	{
+        	}
+        	.previousReviews
+        	{
+        	}
+        	#restaurantName
+        	{  border: 2px solid #ACEA46;
+                border-radius: 4px;
+                font-size:45px;
+        		padding:50px 0px 0px 50px;
+                overflow: hidden;
+                background-color:white;
+                width:37%;
+                margin:20px 0px 20px 0px;
+        	}
+        	#restaurantPhoto
+        	{  border: 2px solid #ACEA46;
+                border-radius: 4px;
+        		margin:0px 100px;
+        		height:275px;
+        		width:25%;
+        		background-color:white;
+        	}
+        	.manageBookings
+
+        	{ 
+        		height:175px;
+        		width:39%;
+                margin: -280px 520px;
+        		padding:105px 0px 0px 40px;
+                color:white;
+              border: 2px solid #ACEA46;
+              border-radius: 4px;
+        		background-color:white;
+        	}
+          
+            #bookingDate
+            {
+                height:60px;
+                width:50%;
+                margin:90px 45px;
+                background-color:white;
+                border: 2px solid black;
+                border-radius: 4px;
+                border-bottom:none;
+                border-top:solid;
+                border-left:solid;
+                border-right:solid;
+
+                border-width:1px;
+                text-align:center;
+                font-size:20px;
+                color:grey;
+
+                padding: 20px 100px 20px 10px;
+            }
+            #bookingNumber
+            {
+                height:60px;
+                width:50%;
+                margin:-100px 45px;
+                background-color:white;
+                border: 2px solid black;
+               border-radius: 4px;
+                border-width:1px;
+                text-align:center;
+                font-size:20px;
+                color:grey;
+                padding: 20px 100px 20px 10px;
+            }
+        	.bio
+        	{   overflow: scroll;
+                height:100px;
+                width:41%;
+                margin: -210px 520px;
+                padding: 30px 0px 0px 10px;
+                background-color:white;
+                border: 2px solid #ACEA46;
+                border-radius: 4px;
+        	} 
+            .restaurantTags
+            {
+                text-align:center;
+                margin:80px 100px;
+                height:250px;
+                width:25%;
+                border: 2px solid #ACEA46;
+                border-radius: 4px;
+                background-color:white;
+                padding:20px 0px 0px 0px;
+            }
+        	.reviewSummary
+        	{   overflow: scroll;
+                margin:-200px 520px;
+                height:100px;
+                width:41%;
+                border: 2px solid #ACEA46;
+                border-radius: 4px;
+                background-color:white;
+                padding: 10px 10px 10px 0px;
+        	}
+            .reviews
+            { overflow: scroll;
+                margin:210px 100px;
+                height:100px;
+                width:74%;
+               border: 2px solid #ACEA46;
+               border-radius: 4px;
+                background-color:white;
+                padding: 10px 10px 10px 0px;
+            }
+    	</style>
+        <script src="restaurantPage.js" defer></script>
+	</head>
+	<body>
+
+<div class="topnav">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <p><b><i>The Spoon</i></b></p>
+</div>
+
+        <div id = "main" class="bg-image">
+
+		<h1 id = "restaurantName">Restaurant Name</h1>
+
+		<div id = "restaurantPhoto">
+           <p style = "font-size:50px;"> Restaurant Image
+        </div>
+
+    <form>
+        <!--start of manageBookings class-->
+		<div class = "manageBookings">
+
+        <p style = "font-size:30px; margin:-90px 45px; color:black;">Make a Booking
+
+            <div id= "bookingDetails"></div>
+
+            <div id = "bookingDate">
+
+               <input type="date">
+
+            </div>
+            <div id = "bookingNumber"> <p style = "margin:5px 45px">Number of People</p>
+
+<p style = "margin:-10px 45px">
+<select>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value = "5">5</option>
+    <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value = "10">10</option>
+
+</select>
+
+</p>
+
+    </div>
+        </div> <!--end of manageBookings class-->
+
+<input class="btn"style = "margin:240px 607px; padding: 5px 0px" type="submit" value="Book">
+
+     </form>
+
+        <div class = "bio"><h4 style = "text-align: center; font-size:30px;">Bio about restaurant</h3></div>
+
+        <div class = "restaurantTags" ><h4>Tags</h4> </div>
+
+        <div class = "reviewSummary"><h4 style = "text-align: center; font-size:30px;">Review Summary</h4></div>
+
+        <div class = "reviews"><h4 style = "text-align: center; font-size:30px;">Reviews</h4></div>
+
+
+    </div>
+
+	</body>
+
+
+</html>
